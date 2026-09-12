@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  color: #2f2118;
+  background: #f6f0e8;
+  font-family: Arial, sans-serif;
+}
+
+.page {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+.hero {
+  padding: 36px;
+  color: white;
+  background: #004df3;
+  border-radius: 24px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+h2 {
+    text-align: center;
+}
+
+.products {
+  padding-left: 1.2rem;
+  list-style: none;
+}
+
+.products li {
+    font-size: 17px;
+    font-weight: 600;
+    background: white;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+}
+
+.products p {
+    margin: 6px 0 0;
+    color: #2f2118;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+button {
+  padding: 12px 18px;
+  color: #2f2118;
+  font-weight: 700;
+  cursor: pointer;
+  background: #ffd166;
+  border: 0;
+  border-radius: 999px;
+}
