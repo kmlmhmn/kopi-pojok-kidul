@@ -7,72 +7,87 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <main class="page">
-      <section class="hero">
-        <p class="eyebrow">Kopi Nyuweni</p>
-        <h1>Kopi Pojok Kidul</h1>
-        <p>Kopi lokal pilihan untuk menemani waktumu setiap saat.</p>
-        <button id="promoButton" type="button">Lihat promo hari ini</button>
-      </section>
+        <a class="skip-link" href="#konten">Lewati ke konten utama</a>
+        <header class="site-header">
+            <nav class="nav" aria-label="Navigasi utama">
+                <a class="brand" href="index.html">Kopi Pojok Kidul</a>
+                <ul>
+                    <li><a aria-current="page" href="index.html">Beranda</a></li>
+                    <li><a href="tentang.html">Tentang Kami</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main id="konten" class="page">
+            <section class="hero" aria-labelledby="hero-title">
+                <p class="eyebrow">Kopi Nyuweni</p>
+                <h1 id="hero-title">Kopi Pojok Kidul</h1>
+                <p>Kopi lokal pilihan untuk menemani waktumu setiap saat.</p>
+                <button id="promoButton" type="button">Lihat promo hari ini</button>
+                <img src="assets/images/etalase-kopi.svg" alt="Etalase Kopi Pojok Kidul berisi kemasan kopi lokal" />
+            </section>
 
-      <section aria-labelledby="produk-title">
-        <h2 id="produk-title">Produk Unggulan Coffe</h2>
-        <ul class="products">
-            <li>
-                Kopi Nyuweni Woke - Rp12.000
-                <p>Kopi hitam dengan rasa kuat dan aroma khas.</p>
-            </li>
+            <section aria-labelledby="produk-title">
+                <h2 id="produk-title">Produk Unggulan Coffe</h2>
 
-            <li>
-                Americano - Rp12.000
-                <p>Espresso dengan air, bercita rasa ringan dan pahit.</p>
-            </li>
+                <div class="product-list">
+                    <article class="product-card">
+                        <h3>Kopi Nyuweni Woke</h3>
+                        <p>Kopi hitam dengan rasa kuat dan aroma khas.</p>
+                        <p class="price">Rp12.000</p>
+                    </article>
+                    <article class="product-card">
+                        <h3>Americano</h3>
+                        <p>Espresso dengan air, bercita rasa ringan dan pahit.</p>
+                        <p class="price">Rp12.000</p>
+                    </article>
+                    <article class="product-card">
+                        <h3>Cappuccino</h3>
+                        <p>Espresso dengan susu dan foam yang lembut.</p>
+                        <p class="price">Rp13.000</p>
+                    </article>
+                    <article class="product-card">
+                        <h3>Kopsu Gula Aren</h3>
+                        <p>Kopi susu dengan manisnya gula aren yang khas.</p>
+                        <p class="price">Rp13.000</p>
+                    </article>
+                    <article class="product-card">
+                        <h3>Kopsu Avocado</h3>
+                        <p>Kopi susu dengan perpaduan rasa alpukat yang creamy.</p>
+                        <p class="price">Rp13.000</p>
+                    </article>
 
-            <li>
-                Cappuccino - Rp13.000
-                <p>Espresso dengan susu dan foam yang lembut.</p>
-            </li>
-
-            <li>
-                Kopsu Gula Aren - Rp13.000
-                <p>Kopi susu dengan manisnya gula aren yang khas.</p>
-            </li>
-
-            <li>
-                Kopsu Avocado - Rp13.000
-                <p>Kopi susu dengan perpaduan rasa alpukat yang creamy.</p>
-            </li>
-        </ul>
-
-        <h2 id="produk-title">Produk Unggulan Non-Coffe</h2>
-        <ul class="products">
-            <li>
-                Red Velvet - Rp14.000
-                <p>Minuman creamy dengan rasa red velvet yang manis dan lembut.</p>
-            </li>
-
-            <li>
-                Cokelat - Rp12.000
-                <p>Minuman cokelat dengan rasa manis, pekat, dan creamy.</p>
-            </li>
-
-            <li>
-                Matcha - Rp13.000
-                <p>Minuman matcha creamy dengan rasa teh hijau yang khas.</p>
-            </li>
-
-            <li>
-                Alpukat Susu - Rp13.000
-                <p>Perpaduan alpukat dan susu yang creamy dan manis.</p>
-            </li>
-
-            <li>
-                Mangga Susu - Rp13.000
-                <p>Perpaduan mangga dan susu dengan rasa manis dan segar.</p>
-            </li>
-        </ul>
-      </section>
-    </main>
+                    <h2 id="produk-title">Produk Unggulan Non-Coffe</h2>
+                    <article class="product-card">
+                        <h3>Red Velvet</h3>
+                        <p>Minuman creamy dengan rasa red velvet yang manis dan lembut.</p>
+                        <p class="price">Rp14.000</p>
+                    </article>
+                    <article class="product-card">
+                        <h3>Chocolatto</h3>
+                        <p>Minuman cokelat dengan rasa manis, pekat, dan creamy.</p>
+                        <p class="price">Rp12.000</p>
+                    </article>
+                    <article class="product-card">
+                        <h3>Matcha</h3>
+                        <p>Minuman matcha creamy dengan rasa teh hijau yang khas.</p>
+                        <p class="price">Rp13.000</p>
+                    </article>
+                    <article class="product-card">
+                        <h3>Avocado Milk</h3>
+                        <p>Perpaduan alpukat dan susu yang creamy dan manis.</p>
+                        <p class="price">Rp13.000</p>
+                    </article>
+                    <article class="product-card">
+                        <h3>Mango Milk</h3>
+                        <p>Perpaduan mangga dan susu dengan rasa manis dan segar.</p>
+                        <p class="price">Rp13.000</p>
+                    </article>
+                </div>
+            </section>
+        </main>
+        <footer class="site-footer">
+            <p>&copy; 2026 Kopi Nusa. Data pada halaman ini bersifat dummy.</p>
+        </footer>
     <script src="js/script.js"></script>
   </body>
 </html>
