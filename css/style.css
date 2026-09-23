@@ -51,6 +51,8 @@ button {
   border: 0;
   border-radius: 999px;
 }
+
+/* ============== uji tab/skip-link ================= */
 .skip-link { position: absolute; left: -9999px; padding: 8px 12px; color: white; background: #2f2118; }
 .skip-link:focus { top: 8px; left: 8px; }
 .site-header { padding: 16px 20px; background: white; border-bottom: 1px solid #dccbbc; }
@@ -63,6 +65,7 @@ a:focus-visible,
 button:focus-visible { outline: 3px solid #2563eb; outline-offset: 3px; }
 .site-footer { padding: 24px 20px; color: white; text-align: center; background: #2f2118; }
 
+/* ============== Galeri ================= */
 img { max-width: 100%; height: auto; }
 figure { margin: 0 0 24px; }
 figcaption { margin-top: 8px; color: #6b5b52; }
@@ -87,11 +90,96 @@ figcaption {
   margin-top: 8px;
   color: #6b5b52;
 }
-
+/* =========== Tentang =============== */
 .about-image {
   display: block;
   width: 100%;
   height: 400px;
   object-fit: cover;
   border-radius: 12px;
+}
+
+/* =========== Kontak ============== */
+
+#konten > h1 {
+  text-align: center;
+}
+
+#konten > p {
+  max-width: 700px;
+  margin: 20px auto;
+  line-height: 1.6;
+}
+#form-kontak {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 20px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+#form-kontak .field {
+  margin-bottom: 16px;
+}
+
+#form-kontak label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+#form-kontak input[type="text"],
+#form-kontak input[type="email"],
+#form-kontak input[type="tel"],
+#form-kontak input[type="date"],
+#form-kontak input[type="time"],
+#form-kontak select,
+#form-kontak textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 9px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  font: inherit;
+}
+
+#form-kontak fieldset {
+  margin: 0 0 16px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#form-kontak fieldset label {
+  margin-top: 8px;
+}
+
+#form-kontak input[type="radio"] {
+  margin-right: 6px;
+}
+
+#form-kontak button {
+  padding: 9px 18px;
+  border: none;
+  border-radius: 5px;
+  background: #af9e08;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+#form-kontak button:hover {
+  opacity: 0.9;
+}
+#preview-form {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 15px;
+  background: white;
+  border: 1px solid #dccbbc;
+  border-radius: 5px;
+  white-space: pre-wrap;
+}
+#kontak-lanjut {
+  max-width: 700px;
+  margin: 30px auto;
 }

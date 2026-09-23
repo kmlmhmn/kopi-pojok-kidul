@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kontak Kopi Pojok Kidul - Website UMKM</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/form.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#konten">Lewati ke konten utama</a>
+    <header class="site-header">
+        <nav class="nav" aria-label="Navigasi utama">
+        <a class="brand" href="index.html">Kopi Pojok Kidul</a>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+            <li><a href="produk.html">Produk</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a aria-current="page" href="kontak.html">Kontak</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="konten" class="page">
+        <h1>Kontak Kopi Pojok Kidul</h1>
+        <p> Silakan kirimkan pertanyaan seputar produk, pesanan, atau kerja sama, 
+            serta saran dan kritik demi peningkatan kualitas tempat, rasa, dan pelayanan kami.
+        </p>
+    
+        <form id="form-kontak" action="#" method="post">
+            <div class="field">
+                <label for="nama">Nama lengkap</label>
+                <input id="nama" name="nama" type="text" autocomplete="name" required minlength="3" />
+            </div>
+
+            <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+
+            <div class="field">
+                <label for="whatsapp">No. whatsapp</label>
+                <input id="whatsapp" name="whatsapp" type="tel" autocomplete="whatsapp" required minlength="10" />
+            </div>
+
+            <div class="field">
+                <label for="tanggal">Tanggal Pengiriman</label>
+                <input id="tanggal" name="tanggal" type="date" autocomplete="tanggal" required/>
+            </div>
+
+            <div class="field">
+                <label for="waktu">Waktu pengiriman</label>
+                <input id="waktu" name="waktu" type="time" autocomplete="waktu" required/>
+            </div>
+
+            <fieldset>
+                <legend>Topik pertanyaan</legend>
+
+                <label>
+                    <input type="radio" name="topik" value="produk" required />
+                    Paket produk
+                </label>
+
+                <label>
+                    <input type="radio" name="topik" value="saran-kritik" />
+                    Saran dan kritik
+                </label>
+
+                <label>
+                    <input type="radio" name="topik" value="pesanan" />
+                    Status pesanan
+                </label>
+
+                <label>
+                    <input type="radio" name="topik" value="kerja-sama" />
+                    Kerja sama
+                </label>
+            </fieldset>
+            <div class="field" id="kategori-saran">
+                <label for="kategori">Saran dan kritik mengenai</label>
+                <select id="kategori" name="kategori">
+                    <option value="">Pilih kategori</option>
+                    <option value="rasa">Rasa</option>
+                    <option value="tempat">Tempat</option>
+                    <option value="pelayanan">Pelayanan</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="paket">Paket produk</label>
+                <select id="paket" name="paket">
+                    <option value="">Pilih paket</option>
+                    <option value="rumahan">Paket seduh rumahan</option>
+                    <option value="kantor">Paket seduh lapak</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="pesan">Pesan</label>
+                <textarea id="pesan" name="pesan" rows="5" required minlength="10"></textarea>
+            </div>
+                <button type="submit">Kirim Pesan</button>
+        </form>
+        <section aria-labelledby="preview-title">
+            <h2 id="preview-title">Preview Data</h2>
+            <pre id="preview-form" aria-live="polite">Data form akan muncul setelah tombol Kirim Pesan diklik</pre>
+        </section>
+        <section aria-labelledby="kontak-lanjut">
+            <h2 id="kontak-lanjut">Informasi lainnya</h2>
+            <p> Kopi Pojok Kidul berlokasi di Kajen, Pekalongan.</p>
+            <p> Jam layanan: Senin–Sabtu, 09.00–23.00 WIB</p>
+            <p> Hubungi Kopi Pojok Kidul melalui Instagram @KopiPojokKidul_</p>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <p>&copy; 2026 Kopi Pojok Kidul. Data pada halaman ini bersifat dummy.</p>
+    </footer>
+  </body>
+</html>
