@@ -1,40 +1,144 @@
+:root {
+  --color-primary: #765548;
+  --color-primary-strong: #5b4035;
+  --color-text: #2f2521;
+  --color-muted: #7d6d65;
+  --color-surface: #ffffff;
+  --color-surface-soft: #f8f3ef;
+  --color-border: #dfd2ca;
+  --color-focus: #b08a5a;
+         
+  --space-1: 0.5rem;
+  --space-2: 0.75rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.875rem;
+  --radius-lg: 1.25rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  color: #2f2118;
-  background: #f6f0e8;
+  color: var(--color-text);
+  background: var(--color-surface-soft);
   font-family: Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .page {
-  max-width: 920px;
-  margin: 0 auto;
-  padding: 32px 20px;
+  width: min(100% - 2rem, 60rem);
+  margin-inline: auto;
+  padding-block: var(--space-5);
+  padding-block: var(--space-6);
 }
 
 .hero {
-  padding: 36px;
-  color: white;
-  background:  #6F4E37;
-  border-radius: 24px;
+  padding: var(--space-5);
+  color: var(--color-surface);
+  background: var(--color-primary);
+  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
+}
+
+.hero h1 {
+  margin-top: -10px;
 }
 
 .hero-image {
   display: block;
   width: 100%;
   height: 320px;
-  margin-top: 20px;
+  margin-top: var(--space-3);
   object-fit: cover;
-  border-radius: 16px;
+  border-radius: var(--radius-md);
+}
+
+.product-list {
+  width: 100%;
+}
+
+.product-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.product-card {
+  margin-top: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  min-height: 230px;
+  padding: 12px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: var(--shadow-card);
+}
+
+.product-card h3 {
+  margin-top: 0;
+  color: var(--color-primary);
+  text-align: center;
+}
+
+.product-card p {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.product-card .price {
+  margin-top: auto;
+  text-align: center;
+}
+
+.product-card .price a {
+  display: inline-block;
+  padding: 5px 10px;
+  color: var(--color-focus);
+  text-decoration: none;
+  border: 1px solid var(--color-focus);
+  border-radius: var(--radius-sm);
+}
+
+.product-card .price a:hover {
+  text-decoration: none;
+  color: var(--color-surface);
+  background: var(--color-primary-strong);
+}
+
+.product-list > h2 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  text-align: center;
 }
 
 .eyebrow {
-  margin: 0 0 8px;
+  margin: 0 0 var(--space-2);
+  color: var(--color-primary);
+  font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
 h2 {
-    text-align: center;
+  text-align: center;
 }
 
 .products {
@@ -43,39 +147,122 @@ h2 {
 }
 
 button {
-  padding: 12px 18px;
-  color: #2f2118;
+  display: inline-block;
+  padding: var(--space-2) var(--space-3);
+  color: var(--color-surface);
+  font: inherit;
   font-weight: 700;
   cursor: pointer;
-  background: #ffd166;
+  background: var(--color-primary);
   border: 0;
-  border-radius: 999px;
+  border-radius: var(--radius-sm);
 }
 
-/* ============== uji tab/skip-link ================= */
-.skip-link { position: absolute; left: -9999px; padding: 8px 12px; color: white; background: #2f2118; }
-.skip-link:focus { top: 8px; left: 8px; }
-.site-header { padding: 16px 20px; background: white; border-bottom: 1px solid #dccbbc; }
-.nav { max-width: 920px; margin: 0 auto; }
-.brand { display: inline-block; margin-bottom: 8px; color: #4b2715; font-weight: 800; text-decoration: none; }
-.nav ul { padding: 0; margin: 0; list-style: none; }
-.nav li { display: inline-block; margin-right: 12px; }
-.nav a[aria-current="page"] { font-weight: 800; }
+button:hover {
+  color: var(--color-surface);
+  background: var(--color-primary-strong);
+}
+
+.hero button {
+  color: var(--color-text);
+  background: #fef3c7;
+}
+
+.hero button:hover {
+  color: var(--color-text);
+  background: #fde68a;
+}
+
+/* ============== Skip Link ================= */
+
+.skip-link {
+  position: absolute;
+  top: -5rem;
+  left: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  color: var(--color-surface);
+  background: var(--color-text);
+}
+
+.skip-link:focus {
+  top: var(--space-3);
+}
+
 a:focus-visible,
-button:focus-visible { outline: 3px solid #2563eb; outline-offset: 3px; }
-.site-footer { padding: 24px 20px; color: white; text-align: center; background: #2f2118; }
+button:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+
+/* ============== Header & Navigasi ================= */
+
+.site-header {
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.nav {
+  width: min(100% - 2rem, 60rem);
+  margin-inline: auto;
+}
+
+.brand {
+  display: inline-block;
+  margin-bottom: var(--space-2);
+  color: var(--color-text);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav li {
+  display: inline-block;
+  margin: 0 var(--space-2) var(--space-1) 0;
+}
+
+.nav a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.nav a[aria-current="page"] {
+  padding: var(--space-1) var(--space-2);
+  color: var(--color-primary-strong);
+  font-weight: 700;
+  text-decoration: none;
+  background: #fef3c7;
+  border-radius: var(--radius-sm);
+}
+
+
+/* ============== Footer ================= */
+
+.site-footer {
+  margin-top: var(--space-5);
+  padding: var(--space-3) var(--space-4);
+  color: var(--color-surface);
+  text-align: center;
+  background: var(--color-text);
+  border-top: 1px solid var(--color-border);
+}
+
 
 /* ============== Galeri ================= */
-img { max-width: 100%; height: auto; }
-figure { margin: 0 0 24px; }
-figcaption { margin-top: 8px; color: #6b5b52; }
-table { width: 100%; border-collapse: collapse; }
-caption { margin-bottom: 8px; font-weight: 700; text-align: left; }
-th,
-td { padding: 10px; text-align: left; border: 1px solid #dccbbc; }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
 
 figure {
-  margin: 0 0 24px;
+  margin: 0 0 var(--space-4);
 }
 
 figure img {
@@ -83,23 +270,91 @@ figure img {
   width: 100%;
   height: 300px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
 }
 
 figcaption {
-  margin-top: 8px;
-  color: #6b5b52;
+  margin-top: var(--space-2);
+  color: var(--color-muted);
 }
-/* =========== Tentang =============== */
+
+#audio-title {
+  color: var(--color-primary);
+  text-align: center;
+}
+
+#audio-note {
+  max-width: 700px;
+  margin: 0 auto var(--space-3);
+  color: var(--color-muted);
+  text-align: center;
+}
+
+audio {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ============== Daftar produk ================= */
+
+.product-card,
+.media-card,
+table,
+form {
+  margin-block: var(--space-3);
+  padding: var(--space-3);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+
+figure {
+  margin-inline: 0;
+}
+
+figcaption,
+caption {
+  color: var(--color-muted);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+caption {
+  margin-bottom: var(--space-2);
+  color: var(--color-primary);
+  font-weight: 700;
+  text-align: left;
+}
+
+th,
+td {
+  padding: var(--space-2);
+  text-align: left;
+  border: 1px solid var(--color-border);
+}
+
+th {
+  color: var(--color-text);
+  background: var(--color-surface-soft);
+}
+
+/* ============== Tentang ================= */
+
 .about-image {
   display: block;
   width: 100%;
   height: 400px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
 }
 
-/* =========== Kontak ============== */
+/* ============== Kontak ================= */
 
 #konten > h1 {
   text-align: center;
@@ -107,25 +362,27 @@ figcaption {
 
 #konten > p {
   max-width: 700px;
-  margin: 20px auto;
+  margin: var(--space-3) auto;
   line-height: 1.6;
 }
+
 #form-kontak {
   max-width: 700px;
-  margin: 30px auto;
-  padding: 20px;
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  margin: var(--space-4) auto;
+  padding: var(--space-3);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
 }
 
 #form-kontak .field {
-  margin-bottom: 16px;
+  margin-bottom: var(--space-3);
 }
 
 #form-kontak label {
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: var(--space-1);
 }
 
 #form-kontak input[type="text"],
@@ -137,49 +394,67 @@ figcaption {
 #form-kontak textarea {
   width: 100%;
   box-sizing: border-box;
-  padding: 9px;
-  border: 1px solid #bbb;
-  border-radius: 5px;
+  padding: var(--space-2);
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
   font: inherit;
 }
 
 #form-kontak fieldset {
-  margin: 0 0 16px;
-  padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  margin: 0 0 var(--space-3);
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
 }
 
 #form-kontak fieldset label {
-  margin-top: 8px;
+  margin-top: var(--space-2);
 }
 
 #form-kontak input[type="radio"] {
-  margin-right: 6px;
+  margin-right: var(--space-1);
 }
 
 #form-kontak button {
-  padding: 9px 18px;
-  border: none;
-  border-radius: 5px;
-  background: #af9e08;
-  color: white;
-  font-size: 16px;
+  display: inline-block;
+  padding: var(--space-2) var(--space-3);
+  color: var(--color-surface);
+  font: inherit;
+  font-weight: 700;
   cursor: pointer;
+  background: var(--color-primary);
+  border: 0;
+  border-radius: var(--radius-sm);
 }
+
 #form-kontak button:hover {
-  opacity: 0.9;
+  color: var(--color-surface);
+  background: var(--color-primary-strong);
 }
+
+#kontak-lanjut {
+  text-align: center;
+}
+
+
+/* ============== Preview Form ================= */
+
 #preview-form {
   max-width: 700px;
-  margin: 20px auto;
-  padding: 15px;
-  background: white;
-  border: 1px solid #dccbbc;
-  border-radius: 5px;
+  margin: var(--space-3) auto;
+  padding: var(--space-3);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
   white-space: pre-wrap;
 }
+
+
+/* ============== Kontak Lanjutan ================= */
+
 #kontak-lanjut {
   max-width: 700px;
-  margin: 30px auto;
+  margin: var(--space-4) auto;
 }
