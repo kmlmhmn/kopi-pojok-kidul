@@ -5,12 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Kopi Pojok Kidul</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
   </head>
   <body>
         <a class="skip-link" href="#konten">Lewati ke konten utama</a>
         <header class="site-header">
             <nav class="nav" aria-label="Navigasi utama">
-                <a class="brand" href="index.html">Kopi Pojok Kidul</a>
+                <a class="brand" href="index.html">
+                    <span class="brand-icon">
+                        <span class="iconify" data-icon="tabler:coffee"></span>
+                    </span>
+
+                    <span class="brand-text">
+                        <span class="brand-name">Kopi Pojok Kidul</span>
+                        <span class="brand-tagline">Secangkir Cerita, Sehangat Suasana</span>
+                    </span>
+                </a>
                 <ul>
                     <li><a aria-current="page" href="index.html">Beranda</a></li>
                     <li><a href="tentang.html">Tentang Kami</a></li>
@@ -22,11 +35,13 @@
         </header>
         <main id="konten" class="page">
             <section class="hero" aria-labelledby="hero-title">
-                <p class="eyebrow">Kopi Nyuweni</p>
-                <h1 id="hero-title">Kopi Pojok Kidul</h1>
-                <p>Kopi lokal pilihan untuk menemani waktumu setiap saat.</p>
-                <button id="promoButton" type="button">Lihat promo hari ini</button>
-                <img class ="hero-image" src="assets/images/etalase kopi beranda.jpg" alt="Etalase Kopi Pojok Kidul berisi kemasan kopi lokal" />
+                <div class="hero-content">
+                    <p class="eyebrow">Kopi Nyuweni</p>
+                    <h1 id="hero-title">Kopi Pojok Kidul</h1>
+                    <p>Kopi lokal pilihan untuk menemani waktumu setiap saat.</p>
+                    <button id="promoButton" type="button">Lihat promo hari ini</button>
+                    <img class ="hero-image" src="assets/images/etalase kopi beranda.jpg" alt="Etalase Kopi Pojok Kidul berisi kemasan kopi lokal" />
+                </div>
             </section>
 
             <section aria-labelledby="produk-title">
@@ -35,57 +50,57 @@
                 <div class="product-list">
                     <img class="hero-image" src="assets/images/produkUnggulBerandaKopi.png" alt="">
                     <div class="product-cards">
-                        <article class="product-card">
+                        <article class="home-product-card">
                             <h3>Kopi Nyuweni Woke</h3>
                             <p>Kopi hitam dengan rasa kuat dan aroma khas.</p>
                             <p class="price"><a href="produk.html">lihat harga</a></p>
                         </article>
-                        <article class="product-card">
+                        <article class="home-product-card">
                             <h3>Americano</h3>
                             <p>Espresso dengan air, bercita rasa ringan dan pahit.</p>
                             <p class="price"><a href="produk.html">lihat harga</a></p>
                         </article>
-                        <article class="product-card">
+                        <article class="home-product-card">
                             <h3>Cappuccino</h3>
                             <p>Espresso dengan susu dan foam yang lembut.</p>
                             <p class="price"><a href="produk.html">lihat harga</a></p>
                         </article>
-                        <article class="product-card">
+                        <article class="home-product-card">
                             <h3>Kopsu Gula Aren</h3>
                             <p>Kopi susu dengan manisnya gula aren yang khas.</p>
                             <p class="price"><a href="produk.html">lihat harga</a></p>
                         </article>
-                        <article class="product-card">
+                        <article class="home-product-card">
                             <h3>Kopsu Avocado</h3>
                             <p>Kopi susu dengan perpaduan rasa alpukat yang creamy.</p>
                             <p class="price"><a href="produk.html">lihat harga</a></p>
                         </article>
                     </div>
 
-                    <h2 id="produk-title">Produk Unggulan Non-Coffe</h2>
+                    <h2 id="non-coffee-title">Produk Unggulan Non-Coffe</h2>
                     <img class="hero-image" src="assets/images/produkUnggulBerandaNoncoffe.png" alt="">
                     <div class="product-cards">
-                        <article class="product-card">
+                        <article class="home-product-card">
                             <h3>Red Velvet</h3>
                             <p>Minuman creamy dengan rasa red velvet yang manis dan lembut.</p>
                             <p class="price"><a href="produk.html">lihat harga</a></p>
                         </article>
-                        <article class="product-card">
+                        <article class="home-product-card">
                             <h3>Chocolatto</h3>
                             <p>Minuman cokelat dengan rasa manis, pekat, dan creamy.</p>
                             <p class="price"><a href="produk.html">lihat harga</a></p>
                         </article>
-                        <article class="product-card">
+                        <article class="home-product-card">
                             <h3>Matcha</h3>
                             <p>Minuman matcha creamy dengan rasa teh hijau yang khas.</p>
                             <p class="price"><a href="produk.html">lihat harga</a></p>
                         </article>
-                        <article class="product-card">
+                        <article class="home-product-card">
                             <h3>Avocado Milk</h3>
                             <p>Perpaduan alpukat dan susu yang creamy dan manis.</p>
                             <p class="price"><a href="produk.html">lihat harga</a></p>
                         </article>
-                        <article class="product-card">
+                        <article class="home-product-card">
                             <h3>Mango Milk</h3>
                             <p>Perpaduan mangga dan susu dengan rasa manis dan segar.</p>
                             <p class="price"><a href="produk.html">lihat harga</a></p>
