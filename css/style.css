@@ -39,7 +39,6 @@ body {
 .page {
   width: min(100% - 2rem, 60rem);
   margin-inline: auto;
-  padding-block: var(--space-5);
   padding-block: var(--space-6);
 }
 
@@ -128,8 +127,9 @@ button:focus-visible {
   width: min(100% - 2rem, 60rem);
   margin-inline: auto;
   display: flex;
+  flex-direction: column;
   gap: var(--space-3);
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
@@ -138,6 +138,7 @@ button:focus-visible {
   margin: 0;
   list-style: none;
   display: flex;
+  flex-direction: column;
   gap: var(--space-2);
   flex-wrap: wrap;
 }
@@ -353,12 +354,7 @@ img {
   max-width: 100%;
   height: auto;
 }
-/* .gallery-grid {
-  display: grid;
-  grid-template-columns:  repeat(2, minmax(0, 1fr));
-  gap: var(--space-4);
-  align-items: center;
-} */
+
 figure {
   margin: 0 0 var(--space-4);
 }
@@ -492,6 +488,20 @@ caption {
 table {
   width: 100%;
   border-collapse: collapse;
+}
+
+.table-scroll {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.table-scroll:focus-visible {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 3px;
+}
+
+.table-scroll table {
+    min-width: 40 rem;
 }
 
 caption {
@@ -651,10 +661,110 @@ th {
   white-space: pre-wrap;
 }
 
-
 /* ============== Kontak Lanjutan ================= */
 
 #kontak-lanjut {
   max-width: 700px;
   margin: var(--space-4) auto;
+}
+
+/* ============== RESPONSIVE DESIGN ================= */
+
+/* Layar HP */
+@media (max-width: 41.99rem) {
+    .page {
+        width: min(100% - 1rem, 60rem);
+        padding-block: var(--space-3);
+    }
+
+    .hero {
+        padding: var(--space-3);
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .hero-image {
+        height: 220px;
+        margin-top: 0;
+    }
+
+    .home-product-cards,
+    .product-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-2);
+    }
+
+    .home-product-card {
+        padding: var(--space-2);
+    }
+
+    .home-product-card h3 {
+        min-height: 0;
+        font-size: 0.9rem;
+    }
+
+    .home-product-card .price a {
+        padding: 6px 8px;
+        white-space: normal;
+    }
+
+    .product-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .nilai-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .card-actions {
+        flex-wrap: wrap;
+    }
+
+    .about-image {
+        height: 250px;
+    }
+}
+
+/* Tablet dan layar menengah */
+@media (min-width: 42rem) {
+    .nav ul {
+        flex-direction: row;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .home-product-cards,
+    .product-cards {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* Layar menengah ke atas */
+@media (min-width: 48rem) {
+    .hero {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Desktop */
+@media (min-width: 60rem) {
+    .nav {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .home-product-cards,
+    .product-cards {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
 }
