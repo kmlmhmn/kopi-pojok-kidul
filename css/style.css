@@ -252,10 +252,10 @@ a:focus-visible {
 .product-list > .hero-image {
     display: block;
     width: 100%;
-    height: 320px;
+    height: auto;
     min-height: 0;
     margin: 0;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
     border-radius: 12px;
 }
@@ -362,8 +362,8 @@ figure {
 figure img {
   display: block;
   width: 100%;
-  height: 300px;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   border-radius: var(--radius-md);
 }
 
@@ -527,8 +527,8 @@ th {
 .about-image {
   display: block;
   width: 100%;
-  height: 400px;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   border-radius: var(--radius-md);
 }
 
@@ -683,7 +683,7 @@ th {
     }
 
     .hero-image {
-        height: 220px;
+        height: auto;
         margin-top: 0;
     }
 
@@ -720,7 +720,7 @@ th {
     }
 
     .about-image {
-        height: 250px;
+        height: auto;
     }
 }
 
