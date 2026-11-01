@@ -6,6 +6,7 @@ const produkUmkm = [
   { nama: "Red Velvet", kategori: "Lapak", harga: 14000, stok: 5 },
   { nama: "Kopsu Avocado", kategori: "Lapak", harga: 13000, stok: 10 },
 ];
+console.table(produkUmkm);
 
 // =========== Format rupiah ============
 const formatRupiah = new Intl.NumberFormat("id-ID", {
