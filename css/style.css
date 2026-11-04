@@ -557,6 +557,24 @@ th {
   color: #991b1b;
 }
 
+#produk-unggulan {
+  font-weight: 700;
+  color: var(--color-primary, #6f3b1f);
+}
+
+.featured-badge {
+  display: inline-flex;
+  align-self: flex-end;
+  margin-block-start: var(--space-2);
+  margin-block-end: var(--space-2);
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  background: #dcfce7;
+  color: #0c87eb;
+}
+
 /* ============== Tentang ================= */
 .about-image {
   display: block;
