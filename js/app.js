@@ -1,10 +1,10 @@
 const produkUmkm = [
   { nama: "Kopi Nyuweni Woke", kategori: "Rumahan", berat: 250, harga: 40000, stok: 5, unggulan : true },
-  { nama: "Kopsu Gula Aren", kategori: "Rumahan", berat: 250, harga: 50000, stok: 0 },
-  { nama: "Cappuccino", kategori: "Rumahan", berat: 250, harga: 50000, stok: 10 },
-  { nama: "Matcha", kategori: "Lapak", harga: 12000, stok: 15, unggulan : true },
-  { nama: "Red Velvet", kategori: "Lapak", harga: 14000, stok: 5 },
-  { nama: "Kopsu Avocado", kategori: "Lapak", harga: 13000, stok: 10 },
+  { nama: "Kopsu Gula Aren", kategori: "Rumahan", berat: 250, harga: 50000, stok: 0, unggulan : false },
+  { nama: "Cappuccino", kategori: "Rumahan", berat: 250, harga: 50000, stok: 10, unggulan : false},
+  { nama: "Matcha", kategori: "Lapak", berat : null ,harga: 12000, stok: 15, unggulan : true },
+  { nama: "Red Velvet", kategori: "Lapak", berat : null ,harga: 14000, stok: 5, unggulan : false },
+  { nama: "Kopsu Avocado", kategori: "Lapak", berat : null ,harga: 13000, stok: 10, unggulan : false },
 ];
 console.table(produkUmkm);
 
