@@ -38,7 +38,22 @@
         <p>Pilih produk sesuai kebutuhan anda.</p>
         <img class="hero-image" src="assets/images/produkkopiSeduhan.png" alt="gambar menu kopi seduhan Kopi Pojok Kidul">
         <figcaption>Menu Kopi Seduhan dari Kopi Pojok Kidul tersedia berbagai macam ukuran dengan banyak variasi harga.</figcaption>
-            
+          
+        <section class="product-section" aria-labelledby="produk-title">
+            <div class="section-heading">
+                <p class="eyebrow">Katalog</p>
+                <h2 id="produk-title">Produk Unggulan UMKM</h2>
+                <p id="produk-status" class="produk-status">Produk belum dimuat.</p>
+            </div>
+            <!-- katalog dengan filter -->
+            <div class="filter-bar" aria-label="Filter kategori produk">
+                <button type="button" class="filter-button is-active" data-filter="Semua">Semua</button>
+                <button type="button" class="filter-button" data-filter="Rumahan">Rumahan</button>
+                <button type="button" class="filter-button" data-filter="Lapak">Lapak</button>
+            </div>
+            <div id="produk-grid" class="product-grid" aria-live="polite"></div>
+        </section>
+        
         <section class="section" aria-labelledby="produk-dinamis-title">
             <div class="section-header">
                 <p class="eyebrow">Data JavaScript</p>

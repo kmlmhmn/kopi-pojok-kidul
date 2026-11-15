@@ -530,6 +530,10 @@ th {
 }
 
 .js-product-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
   padding: var(--space-4);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
@@ -537,7 +541,9 @@ th {
 }
 
 .stock-badge {
+  margin-bottom: var(--space-3);
   display: inline-flex;
+  width: fit-content;
   margin-block-start: var(--space-2);
   padding: 0.25rem 0.6rem;
   border-radius: 999px;
@@ -563,18 +569,65 @@ th {
 }
 
 .featured-badge {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
   display: inline-flex;
   align-self: flex-end;
   margin-block-start: var(--space-2);
   margin-block-end: var(--space-2);
   padding: 0.25rem 0.6rem;
   border-radius: 999px;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   font-weight: 700;
   background: #dcfce7;
   color: #0c87eb;
 }
 
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-block: 1rem 1.5rem;
+}
+
+.filter-button {
+  border: 1px solid var(--color-border, #cbd5e1);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--color-primary, #1f2937);
+  padding: 0.65rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.filter-button:hover {
+  background: var(--color-focus);
+  color: #1f2937;
+}
+
+.filter-button.is-active {
+  background: var(--color-focus);
+  border-color: var(--color-focus);
+  color: #ffff;
+}
+
+.filter-button:hover,
+.filter-button:focus-visible {
+  color: #ffffff;
+  border-color: var(--color-primary, #2563eb);
+  outline: 3px solid rgb(37 99 235 / 20%);
+  outline-offset: 2px;
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  border: 1px dashed #94a3b8;
+  border-radius: 1rem;
+  padding: 1rem;
+  background: #ffffff;
+  color: #64748b;
+}
 /* ============== Tentang ================= */
 .about-image {
   display: block;
