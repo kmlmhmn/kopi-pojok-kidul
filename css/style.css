@@ -753,7 +753,67 @@ th {
   text-align: center;
 }
 
+/* Pesan Error dan Feedback */
+.field-error,
+.form-feedback {
+    margin: 0;
+    color: #b91c1c;
+    font-weight: 700;
+}
 
+.field-error {
+    min-height: 1.4rem;
+}
+
+[aria-invalid="true"] {
+    border-color: #b91c1c;
+    box-shadow: 0 0 0 3px rgb(185 28 28 / 15%);
+}
+
+/* Status Sukses */
+.form-feedback.success {
+    color: #166534;
+}
+
+/* Preferensi Kontak */
+.preferensi-kontak {
+    background-color: var(--color-surface-soft);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.875rem;
+}
+
+.preferensi-kontak h2 {
+    color: var(--color-text);
+    margin-bottom: 1rem;
+}
+
+.preferensi-kontak .field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.preferensi-kontak label {
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+.preferensi-kontak select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    font: inherit;
+}
+
+.preferensi-kontak select:focus {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+}
 /* ============== Preview Form ================= */
 
 #preview-form {
